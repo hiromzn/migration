@@ -1,0 +1,8 @@
+ret,int,long
+ret,long,int
+ret,short,int
+ret,int,short
+arg,int,long
+arg,long,int
+arg,short,int
+arg,int,short
