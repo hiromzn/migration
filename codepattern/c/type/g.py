@@ -1,4 +1,4 @@
-#! python3
+#! /usr/bin/env python3
 
 inf = open( 'typetable.csv', 'r' )
 
