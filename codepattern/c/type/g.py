@@ -33,14 +33,18 @@ int main( int argc, char **argv )
 '''.format(def_t=deftype, arg_t=argtype)
   return( string )
 
+#
+# typetable.csv format:
+#
 # ret,int,long
 # ret,long,int
 # arg,int,long
-
+#
 inf = open( 'typetable.csv', 'r' )
 
 FBASE="TYPE_"
 IDnum=0
+
 def get_fname():
   global IDnum
   IDnum+=1
@@ -51,45 +55,31 @@ import sys
 
 def makec( fname ):
   arg = [
-    '/usr/bin/gcc',
+    'gcc',
     '-c',
-    '-Weverything',
-    '-Wno-unused-parameter',
-    '-Wno-unused-variable',
+    '-Wall',
+#    '-Weverything',
+#    '-Wno-unused-parameter',
+#    '-Wno-unused-variable',
     fname
     ]
-  
-  #for line in command( '/usr/bin/gcc -c -Weverything {src}'.format( src=fname ) ):
-  #  print('===', line)
-  command( '/usr/bin/gcc -c -Weverything {src}'.format( src=fname ) )
-#  command( arg )
-#  res = subprocess.run( arg, stdout=subprocess.PIPE, stderr=subprocess.PIPE )
-#  print( "### RESULTS" )
-#  for line in res.stdout.splitlines():
-#    print('>>> ' + line)
-#                        shell=True, check=True,
-#  sys.stdout.buffer.write(res.stdout)
-#  sys.stdout.buffer.write(res.stderr)
-  print( "### RESULTS_END" )
+  command( arg )
 
 def command(cmd):
-    print( cmd )
+    print( '##### command : ', cmd )
     try:
-        result = subprocess.run(cmd, shell=True, check=True,
-                stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                universal_newlines=True)
+        result = subprocess.run(
+          cmd,
+          check=True,
+          stdout=subprocess.PIPE,
+          stderr=subprocess.STDOUT,
+          universal_newlines=True)
+        print( '# stdout/stderr: ' );
         for line in result.stdout.splitlines():
-            print( line )
-        for line in result.stderr.splitlines():
             print( line )
     except subprocess.CalledProcessError:
         print('外部プログラムの実行に失敗しました [' + cmd + ']', file=sys.stderr)
         sys.exit(1)
-
-# 使用例
-command('ls /')
-#for line in command('ls /'):
-#    print('===', line)
 
 for line in inf:
   #print( line, end='' )
