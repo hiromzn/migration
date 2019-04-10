@@ -1,5 +1,7 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 
+import subprocess
+import sys
 
 def return_type( storetype, rettype ):
   #print( 'create program : RETURN :', storetype, rettype )
@@ -50,9 +52,6 @@ def get_basename():
   global IDnum
   IDnum+=1
   return( "%s%04d" % (FBASE, IDnum) )
-
-import subprocess
-import sys
 
 def makec( basename, prog ):
   srcname = basename + '.c'
