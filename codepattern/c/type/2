@@ -1,4 +1,0 @@
-TYPE_0001.c: In function 'main':
-TYPE_0001.c:9:7: warning: unused variable 'x' [-Wunused-variable]
-   int x = func();
-       ^
