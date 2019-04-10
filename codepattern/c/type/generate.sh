@@ -1,5 +1,5 @@
 BASEID=TYPE
-IDNUM=1
+export IDNUM=1
 
 get_fname()
 {
@@ -26,10 +26,29 @@ int main( int argc, char **argv )
 EOF
 }
 
+gen_arg()
+{
+echo $*;
+fname=$1
+shift;
+cat <<EOF >$fname
+void func_$1( $2 arg )
+{
+	$2 local_var = arg;
+}
+
+int main( int argc, char **argv )
+{
+  func_$1( ($1)1 );
+  return( 0 );
+}
+EOF
+}
+
 cat typetable.csv |sed 's/,/ /g' |while read kind t1 t2
 do
   fn=`get_fname`;
-  echo "### $fn";
+  echo "### $fn : $kind $t1 $t2";
 
   case "$kind" in
   "ret" )
