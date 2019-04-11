@@ -2,4 +2,7 @@
 all: gen 
 
 gen : typetable.csv
-	./generate.py
+	LANG=C ./generate.py
+
+clean :
+	rm -f TYPE_* *~
