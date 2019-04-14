@@ -25,7 +25,7 @@ PDB = ./pdb
 
 all :
 	make setup;
-	-@case "`uname -s`" in \
+	-@case "`uname -s`XX" in \
 	"Linux" | "Darwin") \
 		( \
 		make getinfo; \
