@@ -39,7 +39,7 @@ all :
 		) 2>&1 |tee $(LOGDIR)/makeall-ca.log; \
 		;; \
 	* ) \
-		echo "ERROR: other OS"; >&2 \
+		echo "ERROR: unknown OS : `uname -s`"; >&2 \
 		;; \
 	esac;
 
