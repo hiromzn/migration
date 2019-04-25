@@ -19,6 +19,8 @@ ALLSRCS = $(GETSRCS) $(GETPROTOSRCS)
 OBJS	= $(SRCS:.c=.o)
 
 LOGDIR	= ./log
+MAKELOG = $(LOGDIR)/makeall.log
+SUMMARYLOG = $(LOGDIR)/makesummary.log
 
 # CodeAdvisor
 PDB = ./pdb
@@ -30,13 +32,15 @@ all :
 		( \
 		make getinfo; \
 		make gcc; \
-		) 2>&1 |tee $(LOGDIR)/makeall-gcc.log; \
+		) 2>&1 |tee $(MAKELOG); \
+		make summary; \
 		;; \
 	"HP-UX" ) \
 		( \
 		make getinfo; \
 		make ca; \
-		) 2>&1 |tee $(LOGDIR)/makeall-ca.log; \
+		) 2>&1 |tee $(MAKELOG); \
+		make summary; \
 		;; \
 	* ) \
 		echo "ERROR: unknown OS : `uname -s`"; >&2 \
@@ -45,11 +49,11 @@ all :
 
 ca :
 	make setup
-	make SRCS="$(GETSRCS)" CC=$(CA) COPT="$(CAOPT) $(COPT)" objs
+	make SRCS="$(ALLSRCS)" CC=$(CA) COPT="$(CAOPT) $(COPT)" objs
 
 gcc :
 	make setup
-	make SRCS="$(GETSRCS)" CC=$(GCC) COPT="$(GCCOPT) $(COPT)" objs
+	make SRCS="$(ALLSRCS)" CC=$(GCC) COPT="$(GCCOPT) $(GCCPROTOOPT) $(COPT)" objs
 
 proto :
 	make setup
@@ -59,6 +63,7 @@ objs : $(OBJS)
 
 setup :
 	@ if [ ! -d $(LOGDIR) ]; then mkdir $(LOGDIR); fi
+	@ cp /dev/null $(SUMMARYLOG)
 
 getinfo :
 	LANG=C date;
@@ -76,11 +81,24 @@ debug-body :
 	echo "$(TGT)"
 
 .c.o :
-	@ echo "##### compile $<"
-	- $(CC) $(COPT) -c -o $@ $<
+	@ echo "##### compile: $<"
+	@ echo "##### command: $(CC) $(COPT) -c -o $@ $<" >$(LOGDIR)/$(*F).cmd
+	-@ $(CC) $(COPT) -c -o $@ $< >$(LOGDIR)/$(*F).stdout 2>$(LOGDIR)/$(*F).stderr
+	@ cat $(LOGDIR)/$(*F).cmd
+	@ cat $(LOGDIR)/$(*F).stdout
+	@ cat $(LOGDIR)/$(*F).stderr
+	@ echo "$(*F):stdout=`stat --format=%s $(LOGDIR)/$(*F).stdout`:stderr=`stat --format=%s $(LOGDIR)/$(*F).stderr`" >>$(SUMMARYLOG)
+
+summary :
+	@( for f in 
 
 clean :
 	make SRCS="$(ALLSRCS)" cleans
+	@ rm -f $(LOGDIR)/*.cmd
+	@ rm -f $(LOGDIR)/*.stdout
+	@ rm -f $(LOGDIR)/*.stderr
+	@ rm -f $(MAKELOG)
+	@ rm -f $(SUMMARYLOG)
 
 cleans :
 	rm -rf $(PDB)
