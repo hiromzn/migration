@@ -1,0 +1,13 @@
+diff --git a/codepattern/c/ca/Makefile b/codepattern/c/ca/Makefile
+index 1ca638f..5286e31 100644
+--- a/codepattern/c/ca/Makefile
++++ b/codepattern/c/ca/Makefile
+@@ -87,7 +87,7 @@ debug-body :
+ 	@ cat $(LOGDIR)/$(*F).cmd
+ 	@ cat $(LOGDIR)/$(*F).stdout
+ 	@ cat $(LOGDIR)/$(*F).stderr
+-	@ echo "$(*F):stdout=`stat --format=%s $(LOGDIR)/$(*F).stdout`:stderr=`stat --format=%s $(LOGDIR)/$(*F).stderr`" >>$(SUMMARYLOG)
++	@ echo "$(*F):stdout=`stat -f %s $(LOGDIR)/$(*F).stdout`:stderr=`stat -f %s $(LOGDIR)/$(*F).stderr`" >>$(SUMMARYLOG)
+ 
+ summary :
+ 	@( for f in 

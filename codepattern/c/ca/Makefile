@@ -27,25 +27,22 @@ PDB = ./pdb
 
 all :
 	make setup;
-	-@case "`uname -s`" in \
-	"Linux" | "Darwin") \
-		( \
-		make getinfo; \
-		make gcc; \
-		) 2>&1 |tee $(MAKELOG); \
-		make summary; \
+	-@ ( \
+	make getinfo; \
+	case "`uname -s`" in \
+	"Linux" ) \
+		make gcc STAT_OPT="--format=%s"; \
+		;; \
+	"Darwin") \
+		make gcc STAT_OPT="-f %z"; \
 		;; \
 	"HP-UX" ) \
-		( \
-		make getinfo; \
-		make ca; \
-		) 2>&1 |tee $(MAKELOG); \
-		make summary; \
+		make ca $(STAT_OPT)="-f %z"; \
 		;; \
 	* ) \
 		echo "ERROR: unknown OS : `uname -s`"; >&2 \
 		;; \
-	esac;
+	esac) 2>&1 |tee $(MAKELOG);
 
 ca :
 	make setup
@@ -87,7 +84,7 @@ debug-body :
 	@ cat $(LOGDIR)/$(*F).cmd
 	@ cat $(LOGDIR)/$(*F).stdout
 	@ cat $(LOGDIR)/$(*F).stderr
-	@ echo "$(*F):stdout=`stat --format=%s $(LOGDIR)/$(*F).stdout`:stderr=`stat --format=%s $(LOGDIR)/$(*F).stderr`" >>$(SUMMARYLOG)
+	@ echo "$(*F):stdout=`stat $(STAT_OPT) $(LOGDIR)/$(*F).stdout`:stderr=`stat $(STAT_OPT) $(LOGDIR)/$(*F).stderr`" >>$(SUMMARYLOG)
 
 summary :
 	@( for f in 
