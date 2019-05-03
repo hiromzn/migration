@@ -1,0 +1,10 @@
+src/ca-04272.c:9:4: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        j=i;
+         ~^
+src/ca-04272.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04272.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+3 warnings generated.

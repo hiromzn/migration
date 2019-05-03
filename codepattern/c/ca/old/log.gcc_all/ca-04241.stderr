@@ -1,0 +1,14 @@
+src/ca-04241.c:5:2: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+        foo();
+        ^
+src/ca-04241.c:5:2: warning: this function declaration is not a prototype [-Wstrict-prototypes]
+src/ca-04241.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04241.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-04241.c:8:5: warning: no previous prototype for function 'foo' [-Wmissing-prototypes]
+int foo(void)
+    ^
+5 warnings generated.

@@ -1,0 +1,11 @@
+src/ca-02025.c:8:14: warning: empty character constant [-Winvalid-pp-token]
+    memset(x,'',8);
+             ^
+src/ca-02025.c:8:14: error: expected expression
+src/ca-02025.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02025.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings and 1 error generated.

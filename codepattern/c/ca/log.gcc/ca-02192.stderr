@@ -1,0 +1,4 @@
+src/ca-02192.c:5:19: warning: unknown escape sequence '\z' [-Wunknown-escape-sequence]
+    printf("%c", '\z');
+                  ^~
+1 warning generated.

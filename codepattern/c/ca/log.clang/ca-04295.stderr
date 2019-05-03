@@ -1,0 +1,5 @@
+src/ca-04295.c:4:23: warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void    foo(long(*compar)());
+                         ^
+                          void
+1 warning generated.

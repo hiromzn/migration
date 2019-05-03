@@ -1,0 +1,16 @@
+src/ca-02226.c:5:25: warning: invalid conversion specifier '*' [-Wformat-invalid-specifier]
+    printf("data %s [%.0*ld]\n","aaa", 10);  // G2226
+                     ~~~^
+src/ca-02226.c:5:40: warning: data argument not used by format string [-Wformat-extra-args]
+    printf("data %s [%.0*ld]\n","aaa", 10);  // G2226
+           ~~~~~~~~~~~~~~~~~~~~        ^
+src/ca-02226.c:6:15: warning: invalid conversion specifier ' ' [-Wformat-invalid-specifier]
+    printf("%2 s\n", "foo");                 // G30107
+            ~~^
+src/ca-02226.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02226.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+5 warnings generated.

@@ -1,0 +1,4 @@
+src/ca-20200.c:3:6: warning: no previous prototype for function 'nullptr3' [-Wmissing-prototypes]
+void    nullptr3()
+        ^
+1 warning generated.

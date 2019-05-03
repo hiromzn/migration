@@ -1,0 +1,5 @@
+src/ca-04247.c:7:2: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+        foo(1);
+        ^
+src/ca-04247.c:7:2: warning: this function declaration is not a prototype [-Wstrict-prototypes]
+2 warnings generated.

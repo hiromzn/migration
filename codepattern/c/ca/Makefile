@@ -9,7 +9,11 @@ CAOPT	= -pdb $(PDB) +wall cc +DD64 +w
 GCC	= gcc
 GCCOPT	= -Wall $(GCCWOPT) $(GCCPROTOOPT)
 GCCWOPT = -Wundef -Wempty-body -Wfloat-equal -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+#ALL# GCCWOPT = -Wundef -Wempty-body -Wfloat-equal -Wextra
 GCCPROTOOPT = -Wmissing-prototypes -Wstrict-prototypes
+
+CLANG	= clang
+CLANGOPT = -Weverything
 
 SRCDIR	= ./src
 GETSRCS = `echo $(SRCDIR)/ca-*.c`
@@ -25,19 +29,21 @@ SUMMARYLOG = $(LOGDIR)/makesummary.log
 # CodeAdvisor
 PDB = ./pdb
 
-all :
+all : gcc
+
+comp :
 	make setup;
 	-@ ( \
 	make getinfo; \
 	case "`uname -s`" in \
 	"Linux" ) \
-		make gcc STAT_OPT="--format=%s"; \
+		make objs STAT_OPT="--format=%s"; \
 		;; \
 	"Darwin") \
-		make gcc STAT_OPT="-f %z"; \
+		make objs STAT_OPT="-f %z"; \
 		;; \
 	"HP-UX" ) \
-		make ca $(STAT_OPT)="-f %z"; \
+		make objs $(STAT_OPT)="-f %z"; \
 		;; \
 	* ) \
 		echo "ERROR: unknown OS : `uname -s`"; >&2 \
@@ -46,15 +52,19 @@ all :
 
 ca :
 	make setup
-	make SRCS="$(ALLSRCS)" CC=$(CA) COPT="$(CAOPT) $(COPT)" objs
+	make SRCS="$(ALLSRCS)" CC=$(CA) COPT="$(CAOPT) $(COPT)" comp
 
 gcc :
 	make setup
-	make SRCS="$(ALLSRCS)" CC=$(GCC) COPT="$(GCCOPT) $(GCCPROTOOPT) $(COPT)" objs
+	make SRCS="$(ALLSRCS)" CC=$(GCC) COPT="$(GCCOPT) $(GCCPROTOOPT) $(COPT)" comp
+
+clang :
+	make setup
+	make SRCS="$(ALLSRCS)" CC=$(CLANG) COPT="$(CLANGOPT) $(COPT)" comp
 
 proto :
 	make setup
-	make SRCS="$(GETPROTOSRCS)" CC=$(GCC) COPT="$(GCCOPT) $(GCCPROTOOPT) $(COPT)" objs
+	make SRCS="$(GETPROTOSRCS)" CC=$(GCC) COPT="$(GCCOPT) $(GCCPROTOOPT) $(COPT)" comp
 
 objs : $(OBJS)
 

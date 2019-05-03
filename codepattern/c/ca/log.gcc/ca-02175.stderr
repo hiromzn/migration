@@ -1,0 +1,7 @@
+src/ca-02175.c:7:5: warning: array index 10 is past the end of the array (which contains 10 elements) [-Warray-bounds]
+    arr[10] = 20;
+    ^   ~~
+src/ca-02175.c:5:5: note: array 'arr' declared here
+    int arr[10];
+    ^
+1 warning generated.

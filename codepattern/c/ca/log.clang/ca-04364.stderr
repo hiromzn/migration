@@ -1,0 +1,10 @@
+src/ca-04364.c:6:7: warning: incompatible pointer types assigning to 'int *' from 'char *' [-Wincompatible-pointer-types]
+    p = (char *)&q;
+      ^ ~~~~~~~~~~
+src/ca-04364.c:2:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04364.c:2:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.

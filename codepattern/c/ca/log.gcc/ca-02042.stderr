@@ -1,0 +1,4 @@
+src/ca-02042.c:10:14: warning: comparison between pointer and integer ('caddr' (aka 'char *') and 'int')
+    if (data == DT)
+        ~~~~ ^  ~~
+1 warning generated.

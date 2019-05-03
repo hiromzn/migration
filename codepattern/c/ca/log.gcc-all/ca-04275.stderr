@@ -1,0 +1,10 @@
+src/ca-04275.c:2:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04275.c:2:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-04275.c:7:17: warning: result of comparison of constant 129 with expression of type 'char' is always false [-Wtautological-constant-out-of-range-compare]
+    if( subf[0] == 0x81 && subf[1] == 0x40 ) {
+        ~~~~~~~ ^  ~~~~
+3 warnings generated.

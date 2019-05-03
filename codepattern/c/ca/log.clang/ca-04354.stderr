@@ -1,0 +1,10 @@
+src/ca-04354.c:7:12: warning: result of comparison against a string literal is unspecified (use strncmp instead) [-Wstring-compare]
+        if (ch_ptr=="world")
+                  ^ ~~~~~~~
+src/ca-04354.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04354.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+3 warnings generated.

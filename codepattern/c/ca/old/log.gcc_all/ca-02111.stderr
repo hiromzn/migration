@@ -1,0 +1,10 @@
+src/ca-02111.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02111.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-02111.c:8:5: warning: code will never be executed [-Wunreachable-code]
+    i++;
+    ^
+3 warnings generated.

@@ -1,0 +1,12 @@
+src/ca-04281.c:9:7: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if (i=j)
+            ~^~
+src/ca-04281.c:9:7: note: place parentheses around the assignment to silence this warning
+        if (i=j)
+             ^
+            (  )
+src/ca-04281.c:9:7: note: use '==' to turn this assignment into an equality comparison
+        if (i=j)
+             ^
+             ==
+1 warning generated.

@@ -1,0 +1,4 @@
+src/ca-04292.c:5:6: warning: no previous prototype for function 'foo' [-Wmissing-prototypes]
+void foo()
+     ^
+1 warning generated.

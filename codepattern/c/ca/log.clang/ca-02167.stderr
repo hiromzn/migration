@@ -1,0 +1,13 @@
+src/ca-02167.c:13:9: warning: incompatible pointer to integer conversion passing 'addr' (aka 'char *') to parameter of type 'int' [-Wint-conversion]
+    foo(data);
+        ^~~~
+src/ca-02167.c:6:13: note: passing argument to parameter 'a' here
+int foo(int a) 
+            ^
+src/ca-02167.c:10:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02167.c:10:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.

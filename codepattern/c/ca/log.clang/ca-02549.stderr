@@ -1,0 +1,14 @@
+src/ca-02549.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02549.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-02549.c:7:25: warning: variable 'num' is uninitialized when used here [-Wuninitialized]
+    printf("%x\n", (int)num);
+                        ^~~
+src/ca-02549.c:5:13: note: initialize the variable 'num' to silence this warning
+    int *num;
+            ^
+             = NULL
+3 warnings generated.

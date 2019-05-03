@@ -1,0 +1,4 @@
+src/ca-02837.c:3:8: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+extern foo(void);
+~~~~~~ ^
+1 warning generated.

@@ -1,0 +1,16 @@
+src/ca-02152.c:8:13: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Wint-conversion]
+    strput( MSG_ID, "msg1", "msg2" );
+            ^~~~~~
+src/ca-02152.c:3:29: note: expanded from macro 'MSG_ID'
+#define         MSG_ID      3
+                            ^
+src/ca-02152.c:4:19: note: passing argument to parameter 'a' here
+void strput(char *a, char *b, char *c);
+                  ^
+src/ca-02152.c:6:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02152.c:6:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.

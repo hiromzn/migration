@@ -1,0 +1,4 @@
+src/ca-02144.c:8:9: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'addr' (aka 'char *') [-Wint-conversion]
+    int bar = data;
+        ^     ~~~~
+1 warning generated.

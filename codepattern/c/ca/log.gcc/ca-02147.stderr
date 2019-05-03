@@ -1,0 +1,7 @@
+src/ca-02147.c:11:5: error: conflicting types for 'sample'
+int sample(const char *s)
+    ^
+src/ca-02147.c:3:5: note: previous declaration is here
+int sample(char *s);
+    ^
+1 error generated.

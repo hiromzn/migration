@@ -1,0 +1,10 @@
+src/ca-04230.c:10:27: warning: format specifies type 'void *' but the argument has type 'int *' [-Wformat-pedantic]
+       printf("iptr=%p\n",iptr);
+                    ~~    ^~~~
+src/ca-04230.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04230.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.

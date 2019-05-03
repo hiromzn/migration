@@ -1,0 +1,10 @@
+src/ca-02837.c:3:8: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+extern foo(void);
+~~~~~~ ^
+src/ca-02837.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02837.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.

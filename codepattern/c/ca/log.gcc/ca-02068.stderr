@@ -1,0 +1,4 @@
+src/ca-02068.c:8:12: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+    if(num == -1)
+       ~~~ ^  ~~
+1 warning generated.

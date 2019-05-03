@@ -1,0 +1,10 @@
+src/ca-02192.c:5:19: warning: unknown escape sequence '\z' [-Wunknown-escape-sequence]
+    printf("%c", '\z');
+                  ^~
+src/ca-02192.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02192.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.

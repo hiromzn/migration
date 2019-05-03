@@ -1,0 +1,5 @@
+src/ca-04243.c:3:8: warning: this function declaration is not a prototype [-Wstrict-prototypes]
+int foo();
+       ^
+        void
+1 warning generated.

@@ -1,0 +1,10 @@
+src/ca-02381.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02381.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-02381.c:13:2: warning: extra ';' outside of a function [-Wextra-semi]
+};
+ ^
+3 warnings generated.

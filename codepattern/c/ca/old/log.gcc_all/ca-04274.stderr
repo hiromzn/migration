@@ -1,0 +1,10 @@
+src/ca-04274.c:6:9: warning: ordered comparison between pointer and zero ('char *' and 'int') is an extension [-Wpedantic]
+        if(ptr >= 0)
+           ~~~ ^  ~
+src/ca-04274.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04274.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.

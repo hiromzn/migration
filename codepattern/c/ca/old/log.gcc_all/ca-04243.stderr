@@ -1,0 +1,11 @@
+src/ca-04243.c:3:8: warning: this function declaration is not a prototype [-Wstrict-prototypes]
+int foo();
+       ^
+        void
+src/ca-04243.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04243.c:5:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.

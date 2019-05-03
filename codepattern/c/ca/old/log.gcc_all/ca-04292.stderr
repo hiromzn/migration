@@ -1,0 +1,13 @@
+src/ca-04292.c:2:14: warning: no previous extern declaration for non-static variable 'value' [-Wmissing-variable-declarations]
+unsigned int value = 0x03020100;
+             ^
+src/ca-04292.c:3:15: warning: no previous extern declaration for non-static variable 'ptr' [-Wmissing-variable-declarations]
+unsigned int *ptr = &value;
+              ^
+src/ca-04292.c:5:6: warning: no previous prototype for function 'foo' [-Wmissing-prototypes]
+void foo()
+     ^
+src/ca-04292.c:4:15: warning: no previous extern declaration for non-static variable 'charVal' [-Wmissing-variable-declarations]
+unsigned char charVal;
+              ^
+4 warnings generated.

@@ -1,0 +1,13 @@
+src/ca-03649.c:3:21: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define AVERATE_RATE"0.3"
+                    ^
+src/ca-03649.c:3:9: warning: macro is not used [-Wunused-macros]
+#define AVERATE_RATE"0.3"
+        ^
+src/ca-03649.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-03649.c:5:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+4 warnings generated.

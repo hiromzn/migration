@@ -1,0 +1,5 @@
+src/proto-4242.c:2:9: warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void sub();
+        ^
+         void
+1 warning generated.
