@@ -12,6 +12,12 @@ GCCWOPT = -Wundef -Wempty-body -Wfloat-equal -Wextra -Wno-unused-parameter -Wno-
 #ALL# GCCWOPT = -Wundef -Wempty-body -Wfloat-equal -Wextra
 GCCPROTOOPT = -Wmissing-prototypes -Wstrict-prototypes
 
+#----------
+# CLANG
+#----------
+# DIAGNOSTIC FLAGS IN CLANG 
+#  https://clang.llvm.org/docs/DiagnosticsReference.html
+#  This page lists the diagnostic flags currently supported by Clang.
 CLANG	= clang
 CLANGOPT = -Weverything
 
