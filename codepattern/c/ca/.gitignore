@@ -3,4 +3,4 @@
 *.retry
 *.log
 *.o
-log
+log*
