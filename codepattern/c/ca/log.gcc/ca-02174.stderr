@@ -1,8 +1,0 @@
-src/ca-02174.c:7:7: warning: equality comparison result unused [-Wunused-comparison]
-    a == 1;
-    ~~^~~~
-src/ca-02174.c:7:7: note: use '=' to turn this equality comparison into an assignment
-    a == 1;
-      ^~
-      =
-1 warning generated.

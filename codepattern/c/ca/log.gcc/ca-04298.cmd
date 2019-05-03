@@ -1,1 +1,0 @@
-##### command: gcc -Wall -Wundef -Wempty-body -Wfloat-equal -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wmissing-prototypes -Wstrict-prototypes  -c -o src/ca-04298.o src/ca-04298.c

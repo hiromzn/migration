@@ -1,7 +1,0 @@
-src/proto-0001.c:18:15: warning: unused parameter 'argc' [-Wunused-parameter]
-int main( int argc, char **argv )
-              ^
-src/proto-0001.c:18:28: warning: unused parameter 'argv' [-Wunused-parameter]
-int main( int argc, char **argv )
-                           ^
-2 warnings generated.

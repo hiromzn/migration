@@ -1,4 +1,0 @@
-src/ca-02193.c:5:13: warning: 'DEBUG' is not defined, evaluates to 0 [-Wundef]
-        #if DEBUG
-            ^
-1 warning generated.

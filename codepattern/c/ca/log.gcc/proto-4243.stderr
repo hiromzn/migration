@@ -1,8 +1,0 @@
-src/proto-4243.c:2:8: warning: this function declaration is not a prototype [-Wstrict-prototypes]
-int sub();
-       ^
-        void
-src/proto-4243.c:8:5: warning: no previous prototype for function 'sub' [-Wmissing-prototypes]
-int sub(int i)
-    ^
-2 warnings generated.

@@ -1,4 +1,0 @@
-src/ca-02177.c:5:6: warning: unused variable 'i' [-Wunused-variable]
-        int i;
-            ^
-1 warning generated.

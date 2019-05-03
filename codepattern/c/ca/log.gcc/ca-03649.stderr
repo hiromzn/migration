@@ -1,4 +1,0 @@
-src/ca-03649.c:3:21: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
-#define AVERATE_RATE"0.3"
-                    ^
-1 warning generated.

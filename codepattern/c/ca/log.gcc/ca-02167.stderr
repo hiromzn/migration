@@ -1,7 +1,0 @@
-src/ca-02167.c:13:9: warning: incompatible pointer to integer conversion passing 'addr' (aka 'char *') to parameter of type 'int' [-Wint-conversion]
-    foo(data);
-        ^~~~
-src/ca-02167.c:6:13: note: passing argument to parameter 'a' here
-int foo(int a) 
-            ^
-1 warning generated.

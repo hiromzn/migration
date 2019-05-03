@@ -1,7 +1,0 @@
-src/ca-04212.c:7:9: warning: passing 'char *' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
-    foo(str);
-        ^~~
-src/ca-04212.c:3:25: note: passing argument to parameter 's' here
-void foo(unsigned char *s);
-                        ^
-1 warning generated.

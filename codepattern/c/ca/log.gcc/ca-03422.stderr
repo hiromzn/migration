@@ -1,5 +1,0 @@
-src/ca-03422.c:7:17: warning: illegal character encoding in character literal [-Winvalid-source-encoding]
-    memset(str, '<81>@', 3);   // <91>S<8A>p<83>X<83>y<81>[<83>X
-                ^
-src/ca-03422.c:7:17: warning: multi-character character constant [-Wmultichar]
-2 warnings generated.

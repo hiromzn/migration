@@ -1,7 +1,0 @@
-src/ca-02047.c:4:9: warning: 'CAZ_PROC_STS_2' macro redefined [-Wmacro-redefined]
-#define CAZ_PROC_STS_2  "5"
-        ^
-src/ca-02047.c:3:9: note: previous definition is here
-#define CAZ_PROC_STS_2  "2"
-        ^
-1 warning generated.

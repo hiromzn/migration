@@ -1,7 +1,0 @@
-src/ca-02767.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
-int main(int argc, char **argv)
-             ^
-src/ca-02767.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
-int main(int argc, char **argv)
-                          ^
-2 warnings generated.

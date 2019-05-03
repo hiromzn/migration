@@ -1,7 +1,0 @@
-src/ca-02172.c:5:13: error: static declaration of 'bar' follows non-static declaration
-static void bar(void)
-            ^
-src/ca-02172.c:3:13: note: previous declaration is here
-extern void bar(void);
-            ^
-1 error generated.

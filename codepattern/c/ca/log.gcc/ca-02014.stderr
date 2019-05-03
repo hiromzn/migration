@@ -1,5 +1,0 @@
-src/ca-02014.c:1:20: warning: extra tokens at end of #include directive [-Wextra-tokens]
-#include <stdio.h> *//* <93><FC><97>̓t<83>@<83>C<83><8B>                       */
-                   ^
-                   //
-1 warning generated.

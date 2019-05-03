@@ -1,4 +1,0 @@
-src/ca-02009.c:5:14: warning: '/*' within block comment [-Wcomment]
-        /* comment  /* commen2  */
-                    ^
-1 warning generated.

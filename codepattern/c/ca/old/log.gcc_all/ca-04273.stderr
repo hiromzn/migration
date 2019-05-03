@@ -1,4 +1,0 @@
-src/ca-04273.c:6:23: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
-          return ( v1 == v2 );
-                   ~~ ^  ~~
-1 warning generated.

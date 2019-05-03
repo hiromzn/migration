@@ -1,4 +1,0 @@
-src/ca-20213.c:4:6: warning: no previous prototype for function 'mod' [-Wmissing-prototypes]
-void    mod()
-        ^
-1 warning generated.

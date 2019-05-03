@@ -1,5 +1,0 @@
-src/ca-02025.c:8:14: warning: empty character constant [-Winvalid-pp-token]
-    memset(x,'',8);
-             ^
-src/ca-02025.c:8:14: error: expected expression
-1 warning and 1 error generated.

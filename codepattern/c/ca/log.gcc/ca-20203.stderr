@@ -1,4 +1,0 @@
-src/ca-20203.c:4:5: warning: no previous prototype for function 'foo' [-Wmissing-prototypes]
-int     foo()
-        ^
-1 warning generated.

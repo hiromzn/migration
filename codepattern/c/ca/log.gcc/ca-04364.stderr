@@ -1,4 +1,0 @@
-src/ca-04364.c:6:7: warning: incompatible pointer types assigning to 'int *' from 'char *' [-Wincompatible-pointer-types]
-    p = (char *)&q;
-      ^ ~~~~~~~~~~
-1 warning generated.

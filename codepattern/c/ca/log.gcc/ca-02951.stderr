@@ -1,8 +1,0 @@
-src/ca-02951.c:2:1: warning: return type of 'main' is not 'int' [-Wmain-return-type]
-long  main(void) 
-^
-src/ca-02951.c:2:1: note: change return type to 'int'
-long  main(void) 
-^~~~
-int
-1 warning generated.

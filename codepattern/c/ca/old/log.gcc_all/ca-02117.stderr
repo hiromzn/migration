@@ -1,7 +1,0 @@
-src/ca-02117.c:5:2: error: non-void function 'sub' should return a value [-Wreturn-type]
-        return;
-        ^
-src/ca-02117.c:3:5: warning: no previous prototype for function 'sub' [-Wmissing-prototypes]
-int sub()
-    ^
-1 warning and 1 error generated.

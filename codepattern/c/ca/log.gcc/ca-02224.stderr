@@ -1,4 +1,0 @@
-src/ca-02224.c:7:22: warning: more '%' conversions than data arguments [-Wformat]
-    printf("data %d %d \n",i);
-                    ~^
-1 warning generated.

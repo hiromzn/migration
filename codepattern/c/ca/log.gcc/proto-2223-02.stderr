@@ -1,5 +1,0 @@
-src/proto-2223-02.c:5:9: warning: implicitly declaring library function 'strcpy' with type 'char *(char *, const char *)' [-Wimplicit-function-declaration]
-        strcpy(buf, "abc");
-        ^
-src/proto-2223-02.c:5:9: note: include the header <string.h> or explicitly provide a declaration for 'strcpy'
-1 warning generated.

@@ -1,8 +1,0 @@
-src/ca-04314.c:5:14: warning: if statement has empty body [-Wempty-body]
-        if (argc==2);   {
-                    ^
-src/ca-04314.c:5:14: note: put the semicolon on a separate line to silence this warning
-src/ca-04314.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
-int     main(int argc, char **argv)
-                              ^
-2 warnings generated.

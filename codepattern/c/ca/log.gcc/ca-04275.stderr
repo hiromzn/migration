@@ -1,4 +1,0 @@
-src/ca-04275.c:7:17: warning: result of comparison of constant 129 with expression of type 'char' is always false [-Wtautological-constant-out-of-range-compare]
-    if( subf[0] == 0x81 && subf[1] == 0x40 ) {
-        ~~~~~~~ ^  ~~~~
-1 warning generated.
