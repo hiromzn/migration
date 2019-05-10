@@ -49,7 +49,7 @@ comp :
 		make objs STAT_OPT="-f %z"; \
 		;; \
 	"HP-UX" ) \
-		make objs $(STAT_OPT)="-f %z"; \
+		make objs STAT_OPT="-f %z"; \
 		;; \
 	* ) \
 		echo "ERROR: unknown OS : `uname -s`"; >&2 \
