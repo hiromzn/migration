@@ -1,0 +1,6 @@
+#*
+*~
+*.o
+*.sym
+run
+run.sym
