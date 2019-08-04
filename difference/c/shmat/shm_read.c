@@ -12,7 +12,7 @@ int main( int argc, char **argv )
   char *adr;
 
   if( argc <= 1) {
-	fprintf(stderr, "Usage: shm_read shm_id\n");
+	fprintf(stderr, "Usage: shm_read shm_key\n");
 	exit(EXIT_FAILURE);
   }
 
