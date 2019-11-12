@@ -10,4 +10,3 @@ $(tgt): %: %.c
 
 clean :
 	rm -f $(tgt) *~
-

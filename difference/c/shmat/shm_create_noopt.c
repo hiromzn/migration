@@ -26,30 +26,5 @@ int main( int argc, char **argv )
 
   printf( "shmem ID = %d\n",id);
 
-  if( ( adr = (char *)shmat(id, NULL, 0) ) == (void *)-1 ){
-	perror("shmat");
-  } else {
-	printf( "shmat() address : %08X\n", adr );
-	strcpy( adr, "Initial" );
-	while(1){
-	  printf( "%s\n", adr );
-	  /* terminate when "end" string is written into adr */
-	  if ( strcmp( adr, "end" ) == 0) {
-		break;
-	  }
-	  sleep(3);
-	}
-	
-	if(shmdt( adr )==-1){
-	  perror("shmdt");
-	}
-  }
-
-  /* remove shmem */
-  if( shmctl( id, IPC_RMID, 0 )==-1){
-	perror("shmctl");
-	exit(EXIT_FAILURE);
-  }
-  
   return 0;
 }
