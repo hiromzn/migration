@@ -7,15 +7,20 @@
 
 void dump_memory( void *top, int offset, int size )
 {
-	unsigned char *p = top+offset;
+	unsigned char *p = top;
 	int i;
 
-	for( i=0; i<size; i++ ) {
+	for( i=offset; i < size+offset; i++ ) {
 		if ( i%16 == 0 ) {
 			printf( "\n%08X:%08X:", p+i, i );
 		}
-		printf( " %02X", p[i] );
+		if ( (i & 15) == 8 ) {
+			printf( " : %02X", p[i] );
+		} else {
+			printf( " %02X", p[i] );
+		}
 	}
+	printf( "\n" );
 }
 
 int main( int argc, char **argv )
@@ -27,12 +32,10 @@ int main( int argc, char **argv )
 	int  size = 128;
 
   if( argc <= 1) {
-		fprintf(stderr, "Usage: shm_dump shm_key size offset\n");
+		fprintf(stderr, "Usage: shm_dump shm_key [size=%d] [offset=%d]\n", size, offset );
 		exit(EXIT_FAILURE);
   }
   key = atoi(argv[1]);
-  printf( "shmget key = %d\n", key );
-
 	if( argc >=3 ) {
 		size = atoi(argv[2]);
 	}
