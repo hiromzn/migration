@@ -24,7 +24,8 @@ CLANGOPT = -Weverything
 SRCDIR	= ./src
 GETSRCS = `echo $(SRCDIR)/ca-*.c`
 GETPROTOSRCS = `echo $(SRCDIR)/proto-*.c`
-ALLSRCS = $(GETSRCS) $(GETPROTOSRCS)
+WARNING_SRCS = `echo $(SRCDIR)/wp-*.c`
+ALLSRCS = $(GETSRCS) $(GETPROTOSRCS) $(WARNING_SRCS)
 
 OBJS	= $(SRCS:.c=.o)
 

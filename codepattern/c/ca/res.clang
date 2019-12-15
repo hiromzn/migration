@@ -1,0 +1,1204 @@
+make setup
+make[1]: Entering directory `/home/hmizuno/git/migration/codepattern/c/ca'
+make[1]: Leaving directory `/home/hmizuno/git/migration/codepattern/c/ca'
+make SRCS="`echo ./src/ca-*.c` `echo ./src/proto-*.c` `echo ./src/wp-*.c`" CC=clang COPT="-Weverything " comp
+make[1]: Entering directory `/home/hmizuno/git/migration/codepattern/c/ca'
+make setup;
+make[2]: Entering directory `/home/hmizuno/git/migration/codepattern/c/ca'
+make[2]: Leaving directory `/home/hmizuno/git/migration/codepattern/c/ca'
+make[2]: Entering directory `/home/hmizuno/git/migration/codepattern/c/ca'
+LANG=C date;
+Sun Dec 15 09:45:14 JST 2019
+hostname;
+localhost.localdomain
+uname -a;
+Linux localhost.localdomain 3.10.0-957.21.3.el7.x86_64 #1 SMP Tue Jun 18 16:35:19 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+clang -v
+clang version 3.4.2 (tags/RELEASE_34/dot2-final)
+Target: x86_64-redhat-linux-gnu
+Thread model: posix
+Found candidate GCC installation: /usr/bin/../lib/gcc/i686-redhat-linux/4.8.2
+Found candidate GCC installation: /usr/bin/../lib/gcc/i686-redhat-linux/4.8.5
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-redhat-linux/4.8.2
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-redhat-linux/4.8.5
+Found candidate GCC installation: /usr/lib/gcc/i686-redhat-linux/4.8.2
+Found candidate GCC installation: /usr/lib/gcc/i686-redhat-linux/4.8.5
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/4.8.2
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/4.8.5
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-redhat-linux/4.8.5
+make[2]: Leaving directory `/home/hmizuno/git/migration/codepattern/c/ca'
+make[2]: Entering directory `/home/hmizuno/git/migration/codepattern/c/ca'
+##### compile: src/ca-02001.c
+##### command: clang -Weverything  -c -o src/ca-02001.o src/ca-02001.c
+src/ca-02001.c:7:18: warning: no newline at end of file [-Wnewline-eof]
+/* end of file */
+                 ^
+src/ca-02001.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-02001.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+3 warnings generated.
+##### compile: src/ca-02009.c
+##### command: clang -Weverything  -c -o src/ca-02009.o src/ca-02009.c
+src/ca-02009.c:5:14: warning: '/*' within block comment [-Wcomment]
+        /* comment  /* commen2  */
+                    ^
+src/ca-02009.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc,char **argv)
+             ^
+src/ca-02009.c:3:26: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc,char **argv)
+                         ^
+3 warnings generated.
+##### compile: src/ca-02014.c
+##### command: clang -Weverything  -c -o src/ca-02014.o src/ca-02014.c
+src/ca-02014.c:1:20: warning: extra tokens at end of #include directive [-Wextra-tokens]
+#include <stdio.h> *//* <93><FC><97>̓t<83>@<83>C<83><8B>                       */
+                   ^
+                   //
+1 warning generated.
+##### compile: src/ca-02025.c
+make[2]: [src/ca-02025.o] Error 1 (ignored)
+##### command: clang -Weverything  -c -o src/ca-02025.o src/ca-02025.c
+src/ca-02025.c:8:14: warning: empty character constant [-Winvalid-pp-token]
+    memset(x,'',8);
+             ^
+src/ca-02025.c:8:14: error: expected expression
+src/ca-02025.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02025.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings and 1 error generated.
+##### compile: src/ca-02042.c
+##### command: clang -Weverything  -c -o src/ca-02042.o src/ca-02042.c
+src/ca-02042.c:8:11: warning: initializing 'caddr' (aka 'char *') with an expression of type 'const char [4]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    caddr data = "0x1";
+          ^      ~~~~~
+src/ca-02042.c:10:14: warning: comparison between pointer and integer ('caddr' (aka 'char *') and 'int')
+    if (data == DT)
+        ~~~~ ^  ~~
+src/ca-02042.c:6:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02042.c:6:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+4 warnings generated.
+##### compile: src/ca-02047.c
+##### command: clang -Weverything  -c -o src/ca-02047.o src/ca-02047.c
+src/ca-02047.c:3:9: warning: macro is not used [-Wunused-macros]
+#define CAZ_PROC_STS_2  "2"
+        ^
+src/ca-02047.c:4:9: warning: 'CAZ_PROC_STS_2' macro redefined
+#define CAZ_PROC_STS_2  "5"
+        ^
+src/ca-02047.c:3:9: note: previous definition is here
+#define CAZ_PROC_STS_2  "2"
+        ^
+src/ca-02047.c:4:9: warning: macro is not used [-Wunused-macros]
+#define CAZ_PROC_STS_2  "5"
+        ^
+src/ca-02047.c:6:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02047.c:6:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+5 warnings generated.
+##### compile: src/ca-02068.c
+##### command: clang -Weverything  -c -o src/ca-02068.o src/ca-02068.c
+src/ca-02068.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02068.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-02068.c:8:12: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+    if(num == -1)
+       ~~~ ^  ~~
+3 warnings generated.
+##### compile: src/ca-02111.c
+##### command: clang -Weverything  -c -o src/ca-02111.o src/ca-02111.c
+src/ca-02111.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02111.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-02111.c:8:5: warning: will never be executed [-Wunreachable-code]
+    i++;
+    ^
+3 warnings generated.
+##### compile: src/ca-02117.c
+make[2]: [src/ca-02117.o] Error 1 (ignored)
+##### command: clang -Weverything  -c -o src/ca-02117.o src/ca-02117.c
+src/ca-02117.c:3:5: warning: no previous prototype for function 'sub' [-Wmissing-prototypes]
+int sub()
+    ^
+src/ca-02117.c:5:2: error: non-void function 'sub' should return a value [-Wreturn-type]
+        return;
+        ^
+1 warning and 1 error generated.
+##### compile: src/ca-02127.c
+make[2]: [src/ca-02127.o] Error 1 (ignored)
+##### command: clang -Weverything  -c -o src/ca-02127.o src/ca-02127.c
+src/ca-02127.c:12:1: error: expected statement
+}
+^
+1 error generated.
+##### compile: src/ca-02144.c
+##### command: clang -Weverything  -c -o src/ca-02144.o src/ca-02144.c
+src/ca-02144.c:7:10: warning: initializing 'addr' (aka 'char *') with an expression of type 'const char [4]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    addr data = "0x1";
+         ^      ~~~~~
+src/ca-02144.c:8:9: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'addr' (aka 'char *') [-Wint-conversion]
+    int bar = data;
+        ^     ~~~~
+src/ca-02144.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02144.c:5:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+4 warnings generated.
+##### compile: src/ca-02147.c
+make[2]: [src/ca-02147.o] Error 1 (ignored)
+##### command: clang -Weverything  -c -o src/ca-02147.o src/ca-02147.c
+src/ca-02147.c:7:12: warning: passing 'const char [4]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    sample("abc");
+           ^~~~~
+src/ca-02147.c:3:18: note: passing argument to parameter 's' here
+int sample(char *s);
+                 ^
+src/ca-02147.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02147.c:5:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-02147.c:11:5: error: conflicting types for 'sample'
+int sample(const char *s)
+    ^
+src/ca-02147.c:3:5: note: previous declaration is here
+int sample(char *s);
+    ^
+3 warnings and 1 error generated.
+##### compile: src/ca-02152.c
+##### command: clang -Weverything  -c -o src/ca-02152.o src/ca-02152.c
+src/ca-02152.c:8:13: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Wint-conversion]
+    strput( MSG_ID, "msg1", "msg2" );
+            ^~~~~~
+src/ca-02152.c:3:29: note: expanded from macro 'MSG_ID'
+#define         MSG_ID      3
+                            ^
+src/ca-02152.c:4:19: note: passing argument to parameter 'a' here
+void strput(char *a, char *b, char *c);
+                  ^
+src/ca-02152.c:8:21: warning: passing 'const char [5]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    strput( MSG_ID, "msg1", "msg2" );
+                    ^~~~~~
+src/ca-02152.c:4:28: note: passing argument to parameter 'b' here
+void strput(char *a, char *b, char *c);
+                           ^
+src/ca-02152.c:8:29: warning: passing 'const char [5]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    strput( MSG_ID, "msg1", "msg2" );
+                            ^~~~~~
+src/ca-02152.c:4:37: note: passing argument to parameter 'c' here
+void strput(char *a, char *b, char *c);
+                                    ^
+src/ca-02152.c:6:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02152.c:6:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+5 warnings generated.
+##### compile: src/ca-02167.c
+##### command: clang -Weverything  -c -o src/ca-02167.o src/ca-02167.c
+src/ca-02167.c:12:10: warning: initializing 'addr' (aka 'char *') with an expression of type 'const char [4]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    addr data = "0x1";
+         ^      ~~~~~
+src/ca-02167.c:13:9: warning: incompatible pointer to integer conversion passing 'addr' (aka 'char *') to parameter of type 'int' [-Wint-conversion]
+    foo(data);
+        ^~~~
+src/ca-02167.c:6:13: note: passing argument to parameter 'a' here
+int foo(int a) 
+            ^
+src/ca-02167.c:10:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02167.c:10:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+4 warnings generated.
+##### compile: src/ca-02170.c
+##### command: clang -Weverything  -c -o src/ca-02170.o src/ca-02170.c
+src/ca-02170.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02170.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-02170.c:8:10: warning: the pointer decremented by 1 refers before the beginning of the array [-Warray-bounds-pointer-arithmetic]
+    s2 = s1 - 1;
+         ^    ~
+src/ca-02170.c:5:5: note: array 's1' declared here
+    char s1[10];
+    ^
+3 warnings generated.
+##### compile: src/ca-02172.c
+make[2]: [src/ca-02172.o] Error 1 (ignored)
+##### command: clang -Weverything  -c -o src/ca-02172.o src/ca-02172.c
+src/ca-02172.c:5:13: error: static declaration of 'bar' follows non-static declaration
+static void bar(void)
+            ^
+src/ca-02172.c:3:13: note: previous declaration is here
+extern void bar(void);
+            ^
+src/ca-02172.c:8:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02172.c:8:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings and 1 error generated.
+##### compile: src/ca-02174.c
+##### command: clang -Weverything  -c -o src/ca-02174.o src/ca-02174.c
+src/ca-02174.c:7:7: warning: equality comparison result unused [-Wunused-comparison]
+    a == 1;
+    ~~^~~~
+src/ca-02174.c:7:7: note: use '=' to turn this equality comparison into an assignment
+    a == 1;
+      ^~
+      =
+src/ca-02174.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02174.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02175.c
+##### command: clang -Weverything  -c -o src/ca-02175.o src/ca-02175.c
+src/ca-02175.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02175.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-02175.c:7:5: warning: array index 10 is past the end of the array (which contains 10 elements) [-Warray-bounds]
+    arr[10] = 20;
+    ^   ~~
+src/ca-02175.c:5:5: note: array 'arr' declared here
+    int arr[10];
+    ^
+3 warnings generated.
+##### compile: src/ca-02177.c
+##### command: clang -Weverything  -c -o src/ca-02177.o src/ca-02177.c
+src/ca-02177.c:5:6: warning: unused variable 'i' [-Wunused-variable]
+        int i;
+            ^
+src/ca-02177.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02177.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02181.c
+##### command: clang -Weverything  -c -o src/ca-02181.o src/ca-02181.c
+src/ca-02181.c:6:10: warning: initializing 'char *' with an expression of type 'const char [4]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+   char *p="foo";
+         ^ ~~~~~
+src/ca-02181.c:9:35: warning: field precision should have type 'int', but argument has type 'unsigned long' [-Wformat]
+    snprintf(buf, sizeof(buf), "%.*s", sizeof(buf)-1, p);
+                                ~~^~   ~~~~~~~~~~~~~
+src/ca-02181.c:13:19: warning: format specifies type 'int' but the argument has type 'double' [-Wformat]
+   printf("%d\n", 2.0);
+           ~~     ^~~
+           %f
+src/ca-02181.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02181.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+5 warnings generated.
+##### compile: src/ca-02186.c
+##### command: clang -Weverything  -c -o src/ca-02186.o src/ca-02186.c
+src/ca-02186.c:7:9: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+    if(i<0)
+       ~^~
+src/ca-02186.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02186.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02187.c
+##### command: clang -Weverything  -c -o src/ca-02187.o src/ca-02187.c
+src/ca-02187.c:7:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    if(i=0)
+       ~^~
+src/ca-02187.c:7:9: note: place parentheses around the assignment to silence this warning
+    if(i=0)
+        ^
+       (  )
+src/ca-02187.c:7:9: note: use '==' to turn this assignment into an equality comparison
+    if(i=0)
+        ^
+        ==
+src/ca-02187.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02187.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02191.c
+##### command: clang -Weverything  -c -o src/ca-02191.o src/ca-02191.c
+##### compile: src/ca-02192.c
+##### command: clang -Weverything  -c -o src/ca-02192.o src/ca-02192.c
+src/ca-02192.c:5:19: warning: unknown escape sequence '\z'
+    printf("%c", '\z');
+                  ^~
+src/ca-02192.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02192.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02193.c
+##### command: clang -Weverything  -c -o src/ca-02193.o src/ca-02193.c
+src/ca-02193.c:5:13: warning: 'DEBUG' is not defined, evaluates to 0 [-Wundef]
+        #if DEBUG
+            ^
+src/ca-02193.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02193.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02223.c
+##### command: clang -Weverything  -c -o src/ca-02223.o src/ca-02223.c
+src/ca-02223.c:8:5: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+    foo(a,b);
+    ^
+src/ca-02223.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02223.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02224.c
+##### command: clang -Weverything  -c -o src/ca-02224.o src/ca-02224.c
+src/ca-02224.c:7:22: warning: more '%' conversions than data arguments [-Wformat]
+    printf("data %d %d \n",i);
+                    ~^
+src/ca-02224.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02224.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02225.c
+##### command: clang -Weverything  -c -o src/ca-02225.o src/ca-02225.c
+src/ca-02225.c:8:28: warning: data argument not used by format string [-Wformat-extra-args]
+    printf("data %d \n",i, j);
+           ~~~~~~~~~~~~    ^
+src/ca-02225.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02225.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02226.c
+##### command: clang -Weverything  -c -o src/ca-02226.o src/ca-02226.c
+src/ca-02226.c:5:25: warning: invalid conversion specifier '*' [-Wformat-invalid-specifier]
+    printf("data %s [%.0*ld]\n","aaa", 10);  // G2226
+                     ~~~^
+src/ca-02226.c:6:15: warning: invalid conversion specifier ' ' [-Wformat-invalid-specifier]
+    printf("%2 s\n", "foo");                 // G30107
+            ~~^
+src/ca-02226.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02226.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+4 warnings generated.
+##### compile: src/ca-02381.c
+##### command: clang -Weverything  -c -o src/ca-02381.o src/ca-02381.c
+src/ca-02381.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02381.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-02381.c:13:2: warning: extra ';' outside of a function [-Wextra-semi]
+};
+ ^
+3 warnings generated.
+##### compile: src/ca-02513.c
+##### command: clang -Weverything  -c -o src/ca-02513.o src/ca-02513.c
+src/ca-02513.c:7:16: warning: incompatible pointer to integer conversion assigning to 'int' from '__sighandler_t' (aka 'void (*)(int)') [-Wint-conversion]
+  int ret = ret=signal(SIGCHLD, SIG_DFL);
+               ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/ca-02513.c:12:10: warning: incompatible pointer types assigning to 'int *' from 'double *' [-Wincompatible-pointer-types]
+        i=&d;
+         ^~~
+src/ca-02513.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02513.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+4 warnings generated.
+##### compile: src/ca-02549.c
+##### command: clang -Weverything  -c -o src/ca-02549.o src/ca-02549.c
+src/ca-02549.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02549.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-02549.c:7:25: warning: variable 'num' is uninitialized when used here [-Wuninitialized]
+    printf("%x\n", (int)num);
+                        ^~~
+src/ca-02549.c:5:13: note: initialize the variable 'num' to silence this warning
+    int *num;
+            ^
+             = NULL
+3 warnings generated.
+##### compile: src/ca-02550.c
+##### command: clang -Weverything  -c -o src/ca-02550.o src/ca-02550.c
+src/ca-02550.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02550.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/ca-02767.c
+##### command: clang -Weverything  -c -o src/ca-02767.o src/ca-02767.c
+src/ca-02767.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02767.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/ca-02826.c
+##### command: clang -Weverything  -c -o src/ca-02826.o src/ca-02826.c
+src/ca-02826.c:5:14: warning: unused parameter 'a' [-Wunused-parameter]
+void foo(int a)
+             ^
+src/ca-02826.c:10:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02826.c:10:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02837.c
+##### command: clang -Weverything  -c -o src/ca-02837.o src/ca-02837.c
+src/ca-02837.c:3:8: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+extern foo(void);
+~~~~~~ ^
+src/ca-02837.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02837.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02940.c
+##### command: clang -Weverything  -c -o src/ca-02940.o src/ca-02940.c
+src/ca-02940.c:8:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+src/ca-02940.c:10:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-02940.c:10:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-02951.c
+##### command: clang -Weverything  -c -o src/ca-02951.o src/ca-02951.c
+src/ca-02951.c:2:1: warning: return type of 'main' is not 'int' [-Wmain-return-type]
+long  main(void) 
+^
+src/ca-02951.c:2:1: note: change return type to 'int'
+long  main(void) 
+^~~~
+int
+1 warning generated.
+##### compile: src/ca-03348.c
+##### command: clang -Weverything  -c -o src/ca-03348.o src/ca-03348.c
+src/ca-03348.c:3:5: warning: no previous extern declaration for non-static variable 'a' [-Wmissing-variable-declarations]
+int a=5;
+    ^
+src/ca-03348.c:7:13: warning: declaration shadows a variable in the global scope [-Wshadow]
+        int a=1;
+            ^
+src/ca-03348.c:3:5: note: previous declaration is here
+int a=5;
+    ^
+src/ca-03348.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-03348.c:5:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+4 warnings generated.
+##### compile: src/ca-03422.c
+##### command: clang -Weverything  -c -o src/ca-03422.o src/ca-03422.c
+src/ca-03422.c:7:17: warning: illegal character encoding in character literal [-Winvalid-source-encoding]
+    memset(str, '<81>@', 3);   // <91>S<8A>p<83>X<83>y<81>[<83>X
+                ^
+src/ca-03422.c:7:17: warning: multi-character character constant [-Wmultichar]
+src/ca-03422.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-03422.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+4 warnings generated.
+##### compile: src/ca-03649.c
+##### command: clang -Weverything  -c -o src/ca-03649.o src/ca-03649.c
+src/ca-03649.c:3:21: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define AVERATE_RATE"0.3"
+                    ^
+src/ca-03649.c:3:9: warning: macro is not used [-Wunused-macros]
+#define AVERATE_RATE"0.3"
+        ^
+src/ca-03649.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-03649.c:5:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+4 warnings generated.
+##### compile: src/ca-03813.c
+##### command: clang -Weverything  -c -o src/ca-03813.o src/ca-03813.c
+src/ca-03813.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-03813.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/ca-03874.c
+##### command: clang -Weverything  -c -o src/ca-03874.o src/ca-03874.c
+src/ca-03874.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-03874.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-03874.c:8:13: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+if ( intVal > unIntVal )
+     ~~~~~~ ^ ~~~~~~~~
+3 warnings generated.
+##### compile: src/ca-04212.c
+##### command: clang -Weverything  -c -o src/ca-04212.o src/ca-04212.c
+src/ca-04212.c:6:7: warning: initializing 'char *' with an expression of type 'const char [4]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+char *str = "000";
+      ^     ~~~~~
+src/ca-04212.c:7:9: warning: passing 'char *' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    foo(str);
+        ^~~
+src/ca-04212.c:3:25: note: passing argument to parameter 's' here
+void foo(unsigned char *s);
+                        ^
+2 warnings generated.
+##### compile: src/ca-04227.c
+##### command: clang -Weverything  -c -o src/ca-04227.o src/ca-04227.c
+src/ca-04227.c:8:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04227.c:8:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-04227.c:5:12: warning: padding struct 'str' with 4 bytes to align 'field2' [-Wpadded]
+    double field2;
+           ^
+3 warnings generated.
+##### compile: src/ca-04229.c
+##### command: clang -Weverything  -c -o src/ca-04229.o src/ca-04229.c
+src/ca-04229.c:7:8: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        int i=l;
+            ~ ^
+src/ca-04229.c:11:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04229.c:11:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-04230.c
+##### command: clang -Weverything  -c -o src/ca-04230.o src/ca-04230.c
+src/ca-04230.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04230.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/ca-04231.c
+##### command: clang -Weverything  -c -o src/ca-04231.o src/ca-04231.c
+src/ca-04231.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04231.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/ca-04235.c
+##### command: clang -Weverything  -c -o src/ca-04235.o src/ca-04235.c
+src/ca-04235.c:8:10: warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wconversion]
+int j = l/i;
+    ~   ~^~
+src/ca-04235.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04235.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-04237.c
+##### command: clang -Weverything  -c -o src/ca-04237.o src/ca-04237.c
+src/ca-04237.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04237.c:5:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/ca-04241.c
+##### command: clang -Weverything  -c -o src/ca-04241.o src/ca-04241.c
+src/ca-04241.c:5:2: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+        foo();
+        ^
+src/ca-04241.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04241.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-04241.c:8:5: warning: no previous prototype for function 'foo' [-Wmissing-prototypes]
+int foo(void)
+    ^
+src/ca-04241.c:5:2: note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+        foo();
+        ^
+4 warnings generated.
+##### compile: src/ca-04242.c
+##### command: clang -Weverything  -c -o src/ca-04242.o src/ca-04242.c
+src/ca-04242.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04242.c:5:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-04242.c:3:12: warning: function 'foo' has internal linkage but is not defined [-Wundefined-internal]
+static int foo();
+           ^
+src/ca-04242.c:8:9: note: used here
+        int a= foo();
+               ^
+3 warnings generated.
+##### compile: src/ca-04243.c
+##### command: clang -Weverything  -c -o src/ca-04243.o src/ca-04243.c
+src/ca-04243.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04243.c:5:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/ca-04247.c
+##### command: clang -Weverything  -c -o src/ca-04247.o src/ca-04247.c
+src/ca-04247.c:7:2: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+        foo(1);
+        ^
+src/ca-04247.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04247.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-04253.c
+##### command: clang -Weverything  -c -o src/ca-04253.o src/ca-04253.c
+src/ca-04253.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04253.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/ca-04255.c
+##### command: clang -Weverything  -c -o src/ca-04255.o src/ca-04255.c
+src/ca-04255.c:9:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04255.c:9:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+2 warnings generated.
+##### compile: src/ca-04264.c
+##### command: clang -Weverything  -c -o src/ca-04264.o src/ca-04264.c
+src/ca-04264.c:7:3: warning: anonymous structs are a C11 extension [-Wc11-extensions]
+  struct {
+  ^
+src/ca-04264.c:11:3: warning: anonymous structs are a C11 extension [-Wc11-extensions]
+  struct {
+  ^
+src/ca-04264.c:9:12: warning: padding struct 'struct U::<anonymous at src/ca-04264.c:7:3>' with 4 bytes to align 'b' [-Wpadded]
+    double b;
+           ^
+src/ca-04264.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04264.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+5 warnings generated.
+##### compile: src/ca-04272.c
+##### command: clang -Weverything  -c -o src/ca-04272.o src/ca-04272.c
+src/ca-04272.c:9:4: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        j=i;
+         ~^
+src/ca-04272.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04272.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+3 warnings generated.
+##### compile: src/ca-04273.c
+##### command: clang -Weverything  -c -o src/ca-04273.o src/ca-04273.c
+src/ca-04273.c:6:23: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+          return ( v1 == v2 );
+                   ~~ ^  ~~
+1 warning generated.
+##### compile: src/ca-04274.c
+##### command: clang -Weverything  -c -o src/ca-04274.o src/ca-04274.c
+src/ca-04274.c:6:9: warning: ordered comparison between pointer and zero ('char *' and 'int') is an extension [-Wpedantic]
+        if(ptr >= 0)
+           ~~~ ^  ~
+src/ca-04274.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04274.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-04275.c
+##### command: clang -Weverything  -c -o src/ca-04275.o src/ca-04275.c
+src/ca-04275.c:7:17: warning: comparison of constant 129 with expression of type 'char' is always false [-Wtautological-constant-out-of-range-compare]
+    if( subf[0] == 0x81 && subf[1] == 0x40 ) {
+        ~~~~~~~ ^  ~~~~
+src/ca-04275.c:2:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04275.c:2:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-04281.c
+##### command: clang -Weverything  -c -o src/ca-04281.o src/ca-04281.c
+src/ca-04281.c:9:7: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if (i=j)
+            ~^~
+src/ca-04281.c:9:7: note: place parentheses around the assignment to silence this warning
+        if (i=j)
+             ^
+            (  )
+src/ca-04281.c:9:7: note: use '==' to turn this assignment into an equality comparison
+        if (i=j)
+             ^
+             ==
+src/ca-04281.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04281.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+3 warnings generated.
+##### compile: src/ca-04289.c
+##### command: clang -Weverything  -c -o src/ca-04289.o src/ca-04289.c
+src/ca-04289.c:2:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04289.c:2:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/ca-04292.c
+##### command: clang -Weverything  -c -o src/ca-04292.o src/ca-04292.c
+src/ca-04292.c:2:14: warning: no previous extern declaration for non-static variable 'value' [-Wmissing-variable-declarations]
+unsigned int value = 0x03020100;
+             ^
+src/ca-04292.c:3:15: warning: no previous extern declaration for non-static variable 'ptr' [-Wmissing-variable-declarations]
+unsigned int *ptr = &value;
+              ^
+src/ca-04292.c:5:6: warning: no previous prototype for function 'foo' [-Wmissing-prototypes]
+void foo()
+     ^
+src/ca-04292.c:4:15: warning: no previous extern declaration for non-static variable 'charVal' [-Wmissing-variable-declarations]
+unsigned char charVal;
+              ^
+4 warnings generated.
+##### compile: src/ca-04295.c
+##### command: clang -Weverything  -c -o src/ca-04295.o src/ca-04295.c
+##### compile: src/ca-04298.c
+##### command: clang -Weverything  -c -o src/ca-04298.o src/ca-04298.c
+src/ca-04298.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04298.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+2 warnings generated.
+##### compile: src/ca-04299.c
+##### command: clang -Weverything  -c -o src/ca-04299.o src/ca-04299.c
+src/ca-04299.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04299.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+2 warnings generated.
+##### compile: src/ca-04314.c
+##### command: clang -Weverything  -c -o src/ca-04314.o src/ca-04314.c
+src/ca-04314.c:5:14: warning: if statement has empty body [-Wempty-body]
+        if (argc==2);   {
+                    ^
+src/ca-04314.c:5:14: note: put the semicolon on a separate line to silence this warning
+src/ca-04314.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+2 warnings generated.
+##### compile: src/ca-04315.c
+##### command: clang -Weverything  -c -o src/ca-04315.o src/ca-04315.c
+src/ca-04315.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04315.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+2 warnings generated.
+##### compile: src/ca-04354.c
+##### command: clang -Weverything  -c -o src/ca-04354.o src/ca-04354.c
+src/ca-04354.c:5:8: warning: initializing 'char *' with an expression of type 'const char [6]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        char    *ch_ptr="hello";
+                 ^      ~~~~~~~
+src/ca-04354.c:7:12: warning: result of comparison against a string literal is unspecified (use strncmp instead) [-Wstring-compare]
+        if (ch_ptr=="world")
+                  ^ ~~~~~~~
+src/ca-04354.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04354.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+4 warnings generated.
+##### compile: src/ca-04356.c
+##### command: clang -Weverything  -c -o src/ca-04356.o src/ca-04356.c
+src/ca-04356.c:6:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-04356.c:6:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+2 warnings generated.
+##### compile: src/ca-04364.c
+##### command: clang -Weverything  -c -o src/ca-04364.o src/ca-04364.c
+src/ca-04364.c:6:7: warning: incompatible pointer types assigning to 'int *' from 'char *' [-Wincompatible-pointer-types]
+    p = (char *)&q;
+      ^ ~~~~~~~~~~
+src/ca-04364.c:2:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-04364.c:2:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/ca-06284.c
+##### command: clang -Weverything  -c -o src/ca-06284.o src/ca-06284.c
+src/ca-06284.c:3:5: warning: no previous extern declaration for non-static variable 'a' [-Wmissing-variable-declarations]
+int a=5;
+    ^
+src/ca-06284.c:7:13: warning: declaration shadows a variable in the global scope [-Wshadow]
+        int a=1;
+            ^
+src/ca-06284.c:3:5: note: previous declaration is here
+int a=5;
+    ^
+src/ca-06284.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-06284.c:5:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+4 warnings generated.
+##### compile: src/ca-20048-01.c
+##### command: clang -Weverything  -c -o src/ca-20048-01.o src/ca-20048-01.c
+src/ca-20048-01.c:5:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char *argv[])
+             ^
+src/ca-20048-01.c:5:26: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char *argv[])
+                         ^
+2 warnings generated.
+##### compile: src/ca-20048-02.c
+##### command: clang -Weverything  -c -o src/ca-20048-02.o src/ca-20048-02.c
+##### compile: src/ca-20074.c
+##### command: clang -Weverything  -c -o src/ca-20074.o src/ca-20074.c
+src/ca-20074.c:13:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-20074.c:13:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/ca-20111.c
+##### command: clang -Weverything  -c -o src/ca-20111.o src/ca-20111.c
+src/ca-20111.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char *argv[])
+             ^
+1 warning generated.
+##### compile: src/ca-20112.c
+##### command: clang -Weverything  -c -o src/ca-20112.o src/ca-20112.c
+src/ca-20112.c:12:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+1 warning generated.
+##### compile: src/ca-20132.c
+##### command: clang -Weverything  -c -o src/ca-20132.o src/ca-20132.c
+src/ca-20132.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-20132.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+2 warnings generated.
+##### compile: src/ca-20200.c
+##### command: clang -Weverything  -c -o src/ca-20200.o src/ca-20200.c
+src/ca-20200.c:3:6: warning: no previous prototype for function 'nullptr3' [-Wmissing-prototypes]
+void    nullptr3()
+        ^
+1 warning generated.
+##### compile: src/ca-20201.c
+##### command: clang -Weverything  -c -o src/ca-20201.o src/ca-20201.c
+src/ca-20201.c:4:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-20201.c:4:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+2 warnings generated.
+##### compile: src/ca-20202.c
+##### command: clang -Weverything  -c -o src/ca-20202.o src/ca-20202.c
+##### compile: src/ca-20203.c
+##### command: clang -Weverything  -c -o src/ca-20203.o src/ca-20203.c
+src/ca-20203.c:4:5: warning: no previous prototype for function 'foo' [-Wmissing-prototypes]
+int     foo()
+        ^
+src/ca-20203.c:17:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                 ^
+src/ca-20203.c:17:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int     main(int argc, char **argv)
+                              ^
+3 warnings generated.
+##### compile: src/ca-20205.c
+##### command: clang -Weverything  -c -o src/ca-20205.o src/ca-20205.c
+##### compile: src/ca-20206.c
+##### command: clang -Weverything  -c -o src/ca-20206.o src/ca-20206.c
+src/ca-20206.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-20206.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-20206.c:7:5: warning: array index 10 is past the end of the array (which contains 10 elements) [-Warray-bounds]
+    arr[10] = 20;
+    ^   ~~
+src/ca-20206.c:5:5: note: array 'arr' declared here
+    int arr[10];
+    ^
+3 warnings generated.
+##### compile: src/ca-20208.c
+##### command: clang -Weverything  -c -o src/ca-20208.o src/ca-20208.c
+src/ca-20208.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/ca-20208.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/ca-20208.c:8:10: warning: the pointer decremented by 1 refers before the beginning of the array [-Warray-bounds-pointer-arithmetic]
+    s2 = s1 - 1;
+         ^    ~
+src/ca-20208.c:5:5: note: array 's1' declared here
+    char s1[10];
+    ^
+3 warnings generated.
+##### compile: src/ca-20213.c
+##### command: clang -Weverything  -c -o src/ca-20213.o src/ca-20213.c
+src/ca-20213.c:4:6: warning: no previous prototype for function 'mod' [-Wmissing-prototypes]
+void    mod()
+        ^
+src/ca-20213.c:6:8: warning: initializing 'char *' with an expression of type 'const char [7]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        char    *p="string";
+                 ^ ~~~~~~~~
+2 warnings generated.
+##### compile: src/ca-20229.c
+##### command: clang -Weverything  -c -o src/ca-20229.o src/ca-20229.c
+src/ca-20229.c:18:12: warning: variable 'x' may be uninitialized when used here [-Wconditional-uninitialized]
+        if(x == 0)
+           ^
+src/ca-20229.c:8:18: note: initialize the variable 'x' to silence this warning
+        int     x;
+                 ^
+                  = 0
+src/ca-20229.c:24:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char *argv[])
+             ^
+src/ca-20229.c:24:26: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char *argv[])
+                         ^
+3 warnings generated.
+##### compile: src/proto-0001.c
+##### command: clang -Weverything  -c -o src/proto-0001.o src/proto-0001.c
+src/proto-0001.c:18:15: warning: unused parameter 'argc' [-Wunused-parameter]
+int main( int argc, char **argv )
+              ^
+src/proto-0001.c:18:28: warning: unused parameter 'argv' [-Wunused-parameter]
+int main( int argc, char **argv )
+                           ^
+2 warnings generated.
+##### compile: src/proto-2223-01.c
+##### command: clang -Weverything  -c -o src/proto-2223-01.o src/proto-2223-01.c
+src/proto-2223-01.c:4:19: warning: implicit declaration of function 'sub' is invalid in C99 [-Wimplicit-function-declaration]
+   printf("%d\n", sub());
+                  ^
+src/proto-2223-01.c:2:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/proto-2223-01.c:2:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/proto-2223-01.c:7:5: warning: no previous prototype for function 'sub' [-Wmissing-prototypes]
+int sub()
+    ^
+src/proto-2223-01.c:4:19: note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+   printf("%d\n", sub());
+                  ^
+4 warnings generated.
+##### compile: src/proto-2223-02.c
+##### command: clang -Weverything  -c -o src/proto-2223-02.o src/proto-2223-02.c
+src/proto-2223-02.c:5:9: warning: implicitly declaring library function 'strcpy' with type 'char *(char *, const char *)'
+        strcpy(buf, "abc");
+        ^
+src/proto-2223-02.c:5:9: note: please include the header <string.h> or explicitly provide a declaration for 'strcpy'
+src/proto-2223-02.c:2:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/proto-2223-02.c:2:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+3 warnings generated.
+##### compile: src/proto-4241-01.c
+##### command: clang -Weverything  -c -o src/proto-4241-01.o src/proto-4241-01.c
+src/proto-4241-01.c:4:19: warning: implicit declaration of function 'sub' is invalid in C99 [-Wimplicit-function-declaration]
+   printf("%d\n", sub());
+                  ^
+src/proto-4241-01.c:2:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/proto-4241-01.c:2:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/proto-4241-01.c:7:5: warning: no previous prototype for function 'sub' [-Wmissing-prototypes]
+int sub(void)
+    ^
+src/proto-4241-01.c:4:19: note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+   printf("%d\n", sub());
+                  ^
+4 warnings generated.
+##### compile: src/proto-4241-02.c
+##### command: clang -Weverything  -c -o src/proto-4241-02.o src/proto-4241-02.c
+src/proto-4241-02.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/proto-4241-02.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/proto-4242.c
+##### command: clang -Weverything  -c -o src/proto-4242.o src/proto-4242.c
+src/proto-4242.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/proto-4242.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+2 warnings generated.
+##### compile: src/proto-4243.c
+##### command: clang -Weverything  -c -o src/proto-4243.o src/proto-4243.c
+src/proto-4243.c:3:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char **argv)
+             ^
+src/proto-4243.c:3:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char **argv)
+                          ^
+src/proto-4243.c:8:5: warning: no previous prototype for function 'sub' [-Wmissing-prototypes]
+int sub(int i)
+    ^
+3 warnings generated.
+##### compile: src/wp-0001.c
+##### command: clang -Weverything  -c -o src/wp-0001.o src/wp-0001.c
+src/wp-0001.c:6:7: warning: cast from 'int *' to 'long *' increases required alignment from 4 to 8 [-Wcast-align]
+        lp = (long *)&i;
+             ^~~~~~~~~~
+1 warning generated.
+##### compile: src/wp-0002.c
+##### command: clang -Weverything  -c -o src/wp-0002.o src/wp-0002.c
+src/wp-0002.c:8:7: warning: cast from 'int *' to 'size_t *' (aka 'unsigned long *') increases required alignment from 4 to 8 [-Wcast-align]
+        lp = (size_t *)&i;
+             ^~~~~~~~~~~~
+1 warning generated.
+##### compile: src/wp-0003.c
+##### command: clang -Weverything  -c -o src/wp-0003.o src/wp-0003.c
+src/wp-0003.c:13:8: warning: incompatible pointer types passing 'int *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+        func( &i );
+              ^~
+src/wp-0003.c:5:18: note: passing argument to parameter 'arg' here
+void func( long *arg )
+                 ^
+1 warning generated.
+##### compile: src/wp-0004.c
+##### command: clang -Weverything  -c -o src/wp-0004.o src/wp-0004.c
+src/wp-0004.c:13:8: warning: incompatible pointer types passing 'int *' to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+        func( &i );
+              ^~
+src/wp-0004.c:5:20: note: passing argument to parameter 'arg' here
+void func( size_t *arg )
+                   ^
+1 warning generated.
+make[2]: Leaving directory `/home/hmizuno/git/migration/codepattern/c/ca'
+make[1]: Leaving directory `/home/hmizuno/git/migration/codepattern/c/ca'
