@@ -7,10 +7,11 @@ CA	= cadvise
 CAOPT	= -pdb $(PDB) +wall cc +DD64 +w
 
 GCC	= gcc
-GCCOPT	= -Wall $(GCCWOPT) $(GCCPROTOOPT)
-GCCWOPT = -Wundef -Wempty-body -Wfloat-equal -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+GCCWOPT_NO = -Wno-unused-parameter -Wno-missing-field-initializers
+GCCWOPT = -Wundef -Wempty-body -Wfloat-equal -Wextra $(GCCWOPT_NO)
 #ALL# GCCWOPT = -Wundef -Wempty-body -Wfloat-equal -Wextra
 GCCPROTOOPT = -Wmissing-prototypes -Wstrict-prototypes
+GCCOPT	= -Wall $(GCCWOPT) $(GCCPROTOOPT)
 
 #----------
 # CLANG
@@ -19,7 +20,7 @@ GCCPROTOOPT = -Wmissing-prototypes -Wstrict-prototypes
 #  https://clang.llvm.org/docs/DiagnosticsReference.html
 #  This page lists the diagnostic flags currently supported by Clang.
 CLANG	= clang
-CLANGOPT = -Weverything
+CLANGOPT = -Weverything $(GCCWOPT_NO)
 
 SRCDIR	= ./src
 GETSRCS = `echo $(SRCDIR)/ca-*.c`
