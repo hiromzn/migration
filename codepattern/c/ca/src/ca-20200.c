@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-void	nullptr3()
+void	nullptr3(void); /* add prototype */
+
+void	nullptr3(void)
 {
 	char	p[20];
 	FILE	*fp;
