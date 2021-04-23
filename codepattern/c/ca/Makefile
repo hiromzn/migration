@@ -1,4 +1,6 @@
 
+LANG	= C
+
 CC	= cc
 COPT	=
 
@@ -81,7 +83,7 @@ setup :
 	@ cp /dev/null $(SUMMARYLOG)
 
 getinfo :
-	LANG=C date;
+	date;
 	hostname;
 	uname -a;
 	- $(CC) -v
