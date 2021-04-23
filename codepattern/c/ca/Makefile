@@ -12,7 +12,7 @@ GCC	= gcc
 GCCWOPT_NO = -Wno-unused-parameter -Wno-missing-field-initializers
 GCCWOPT = -Wundef -Wempty-body -Wfloat-equal -Wextra $(GCCWOPT_NO)
 #ALL# GCCWOPT = -Wundef -Wempty-body -Wfloat-equal -Wextra
-GCCPROTOOPT = -Wmissing-prototypes -Wstrict-prototypes
+GCCPROTOOPT = -Wmissing-prototypes -Wstrict-prototypes -Wconversion
 GCCOPT	= -Wall $(GCCWOPT) $(GCCPROTOOPT)
 
 #----------
