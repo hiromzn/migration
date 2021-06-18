@@ -37,6 +37,25 @@ memset( &foo, 0x00, sizeof( MAX ) );
 ```
 memset( foo.arr, 0x00, foo.len );
 ```
+### comment
+- varchar is defined in Pro*C
+- reference URL : 
+  - https://docs.oracle.com/cd/E57425_01/121/LNPCC/GUID-33AC6FC8-EA9D-4C7F-ADAC-D01A0DF4E281.htm
+- memo
+```
+VARCHARはC言語の構造体
+    VARCHAR   username[20];
+    
+プリコンパイラは上の宣言を、配列および長さを持つ次の構造体に展開する。
+    struct 
+    { 
+        unsigned short  len; 
+        unsigned char   arr[20]; 
+    } username;
+
+sample code:
+    printf("Username is %.*s\n", username.len, username.arr);
+```
 
 # pattern
 ## description
