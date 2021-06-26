@@ -1,0 +1,25 @@
+# pattern
+- signal_SIGKILL_SIGSTOP
+
+## description
+- The sig argument of signal() specifies the signal, which may be any signal except *SIGKILL* *SIGSTOP*.
+
+## code
+- sample code : src/singal_kill_stop.c
+- the following code returns ERROR.
+
+```
+#include <stdio.h>
+#include <signal.h>
+#include <errno.h>
+
+main()
+{
+	if ( SIG_ERR == signal(SIGKILL, SIG_DFL) ) {
+		perror( "SIGKILL" );
+	}
+	if ( SIG_ERR == signal(SIGSTOP, SIG_DFL) ) {
+		perror( "SIGSTOP" );
+	}
+}
+```
