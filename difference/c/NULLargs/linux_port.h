@@ -26,6 +26,7 @@
 #define strcmp(a, b) (strcmp((a) == NULL ? "" : (a), (b) == NULL ? "" : (b)))
 #define strncmp(a, b, c)  (strncmp((a) == NULL ? "" : (a), (b) == NULL ? "" : (b), (c)))
 #define memcmp(a, b, c)  (memcmp((a) == NULL ? "" : (a), (b) == NULL ? "" : (b), (c)))
+#define memset(a, b, c)   ((a) == NULL ? NULL : memset((a), (b), (c)))
 #define strcat(a,b) (strcat((a), (b) == NULL ? "" : (b)))
 #define strncat(a,b,c) (strncat((a), (b) == NULL ? "" : (b), (c)))
 #define strchr(a,b) ((a) == NULL ? NULL : strchr((a),(b)))
