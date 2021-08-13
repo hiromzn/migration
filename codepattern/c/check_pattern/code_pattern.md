@@ -23,3 +23,19 @@ main()
 	}
 }
 ```
+
+# pattern
+- initialize_auto_array
+
+## description
+- How to initialize aoto array valiable (stack array).
+
+## code
+
+```
+void foo()
+{
+	char no_clean_buf[100];		// no clean buffer
+	char zero_buf[100] = {0};	// ZERO clear buffer
+}
+```
