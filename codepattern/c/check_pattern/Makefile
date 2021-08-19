@@ -6,26 +6,20 @@ SILENT_FLAG = .SILENT
 # source directory
 SRC = src
 
-# bin directory
-BIN = bin
-
 CC = gcc
 
 CFLAGS = -g -Wall
 
 srcs = $(wildcard $(SRC)/*.c)
 
-tgt = $(patsubst $(SRC)/%,$(BIN)/%,$(srcs:.c=))
+tgt = $(srcs:.c=)
 
-all : mkenv $(tgt)
+all : $(tgt)
 
-mkenv:
-	-mkdir -p $(BIN)
-
-$(tgt): $(srcs)
+.c. :
 	$(CC) $(CFLAGS) $< -o $@
 
 clean :
 	rm -f $(tgt) *~ 
-	rm -rf $(BIN)/*.dSYM
+	rm -rf $(SRC)/*.dSYM
 
