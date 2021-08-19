@@ -4,6 +4,13 @@
 ## description
 - The sig argument of signal() specifies the signal, which may be any signal except *SIGKILL* *SIGSTOP*.
 
+## manual
+- CentOS 7.9
+- man signal
+  - The signals SIGKILL and SIGSTOP cannot be caught or ignored.
+- man 7 signal
+  - The signals SIGKILL and SIGSTOP cannot be caught, blocked, or ignored.
+
 ## code
 - sample code : src/singal_kill_stop.c
 - the following code returns ERROR.
